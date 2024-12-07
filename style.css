@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    height: 100%;
+    background: url('sporthal.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative; /* Voor pseudo-element */
+    overflow: hidden; /* Scrollen uitschakelen */
+}
+
+/* Blur effect over de achtergrond */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Donkere overlay */
+    backdrop-filter: blur(5px); /* Blur over de foto */
+    z-index: -1; /* Achtergrondlaag */
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #3a3a3a, rgba(58, 58, 58, 1) 50%, transparent);
+    padding: 15px;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Voorgrondlaag */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    height: 80px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px black;
+    margin: 0;
+}
+
+/* Algemene pagina-instellingen */
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px; /* Rekening houdend met de header */
+    color: #fff;
+    padding: 20px;
+}
+
+/* Front Page */
+#front-page h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.competition-box {
+    display: flex; /* Zorg ervoor dat de container flex is */
+    flex-direction: column; /* Zet de items verticaal */
+    justify-content: center; /* Centraal uitlijnen in de verticale richting */
+    align-items: center; /* Centraal uitlijnen in de horizontale richting */
+    background: rgba(58, 58, 58, 0.8);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.primary-button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: rgb(190, 40, 40);
+    color: #fff;
+    border: 5px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 20px; /* Ruimte boven de knop */
+}
+
+.primary-button:hover {
+    background-color: black;
+    border-color: white;
+}
+
+/* Center de standenlijst */
+#standings-list {
+    list-style: none; /* Verwijder de standaard puntjes */
+    padding: 0;       /* Verwijder extra witruimte links */
+    margin: 0 auto;   /* Zorgt dat de lijst in het midden staat */
+    text-align: center; /* Centreer de tekst in de lijst */
+}
+
+#standings-list li {
+    margin-bottom: 10px; /* Optionele spatiëring tussen regels */
+    font-size: 1.2rem;   /* Optionele styling van de tekstgrootte */
+}
+
+/* Center de uitslagenlijst */
+#results-list {
+    list-style: none; /* Verwijder de standaard puntjes */
+    padding: 0;       /* Verwijder extra witruimte links */
+    margin: 0 auto;   /* Zorgt dat de lijst in het midden staat */
+    text-align: center; /* Centreer de tekst in de lijst */
+}
+
+#results-list li {
+    margin-bottom: 10px; /* Optionele spatiëring tussen regels */
+    font-size: 1.2rem;   /* Optionele styling van de tekstgrootte */
+}

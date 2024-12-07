@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vios Competitie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="vioshandballogo2004.png" alt="Vios Logo" class="logo">
+            <h1>MARIEKE'S HANDBALSEIZOEN</h1>
+            <img src="vioshandballogo2004.png" alt="Vios Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Front Page -->
+    <section id="front-page" class="page">
+        <h1>Marieke's handbalseizoen</h1>
+        <button id="start-button" class="primary-button">Start het seizoen!</button>
+    </section>
+
+    <!-- Competition Section -->
+    <section id="competition" class="page" style="display: none;">
+        <div id="poem-section" class="competition-box" style="display: none;">
+            <h2>Gedicht:</h2>
+            <p id="poem-text"></p>
+            <button id="poem-button" class="primary-button" style="display: none;">Volgende</button>
+        </div>        
+        <div id="matchday-results" class="competition-box" style="display: none;">
+            <h2>Wedstrijddag Uitslagen</h2>
+            <ul id="results-list"></ul>
+            <button id="next-button" class="primary-button" style="display: none;">Volgende</button>
+        </div>
+        <div id="standings" class="competition-box" style="display: none;">
+            <h2>Standen</h2>
+            <ul id="standings-list"></ul>
+            <button id="proceed-button" class="primary-button" style="display: none;">Volgende</button>
+        </div>
+        <div id="champion" class="competition-box" style="display: none;">
+            <h2>Kampioen!</h2>
+            <button id="restart-button" class="primary-button">Nog een seizoen!</button>
+        </div>
+    </section>
+
+    <script src="suprise.js"></script>
+</body>
+</html>
